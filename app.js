@@ -9,7 +9,7 @@ app.use(cors());
 
 app.use(express.json());
 
-const port = process.env.port || 8080;
+const PORT = process.env.PORT || 8080;
 
 let data = [
   {
@@ -103,6 +103,6 @@ app.put("/edit/:id", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server Running at Port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server Running at Port ${PORT}`);
 });
