@@ -91,6 +91,7 @@ app.delete("/delete/:id", (req, res) => {
 
 app.put("/edit/:id", (req, res) => {
   let d = req.body;
+  d._id = req.params.id;
 
   let filtered_Data = data.filter((ele) => ele._id != req.params.id);
 
